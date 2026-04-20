@@ -14,35 +14,46 @@
 			remoteGlobalIDString = D564E0602F95EF57004B1ED1;
 			remoteInfo = MarketplaceApp;
 		};
-		D564E0792F95EF5D004B1ED1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D564E0592F95EF57004B1ED1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D564E0602F95EF57004B1ED1;
-			remoteInfo = MarketplaceApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D564E0612F95EF57004B1ED1 /* MarketplaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketplaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D564E06E2F95EF5D004B1ED1 /* MarketplaceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketplaceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D564E0782F95EF5D004B1ED1 /* MarketplaceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketplaceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D564E10E2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "MarketplaceApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Listings.json,
+			);
+			target = D564E0602F95EF57004B1ED1 /* MarketplaceApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		D564E10F2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "Compile Sources" phase from "MarketplaceApp" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = D564E05D2F95EF57004B1ED1 /* Sources */;
+			membershipExceptions = (
+				Resources/Listings.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D564E0632F95EF57004B1ED1 /* MarketplaceApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D564E10E2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "MarketplaceApp" target */,
+				D564E10F2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "Compile Sources" phase from "MarketplaceApp" target */,
+			);
 			path = MarketplaceApp;
 			sourceTree = "<group>";
 		};
 		D564E0712F95EF5D004B1ED1 /* MarketplaceAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MarketplaceAppTests;
-			sourceTree = "<group>";
-		};
-		D564E07B2F95EF5D004B1ED1 /* MarketplaceAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MarketplaceAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,13 +73,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D564E0752F95EF5D004B1ED1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +81,6 @@
 			children = (
 				D564E0632F95EF57004B1ED1 /* MarketplaceApp */,
 				D564E0712F95EF5D004B1ED1 /* MarketplaceAppTests */,
-				D564E07B2F95EF5D004B1ED1 /* MarketplaceAppUITests */,
 				D564E0622F95EF57004B1ED1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +90,6 @@
 			children = (
 				D564E0612F95EF57004B1ED1 /* MarketplaceApp.app */,
 				D564E06E2F95EF5D004B1ED1 /* MarketplaceAppTests.xctest */,
-				D564E0782F95EF5D004B1ED1 /* MarketplaceAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,29 +142,6 @@
 			productReference = D564E06E2F95EF5D004B1ED1 /* MarketplaceAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D564E0772F95EF5D004B1ED1 /* MarketplaceAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D564E0882F95EF5D004B1ED1 /* Build configuration list for PBXNativeTarget "MarketplaceAppUITests" */;
-			buildPhases = (
-				D564E0742F95EF5D004B1ED1 /* Sources */,
-				D564E0752F95EF5D004B1ED1 /* Frameworks */,
-				D564E0762F95EF5D004B1ED1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D564E07A2F95EF5D004B1ED1 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D564E07B2F95EF5D004B1ED1 /* MarketplaceAppUITests */,
-			);
-			name = MarketplaceAppUITests;
-			packageProductDependencies = (
-			);
-			productName = MarketplaceAppUITests;
-			productReference = D564E0782F95EF5D004B1ED1 /* MarketplaceAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +156,6 @@
 						CreatedOnToolsVersion = 26.3;
 					};
 					D564E06D2F95EF5D004B1ED1 = {
-						CreatedOnToolsVersion = 26.3;
-						TestTargetID = D564E0602F95EF57004B1ED1;
-					};
-					D564E0772F95EF5D004B1ED1 = {
 						CreatedOnToolsVersion = 26.3;
 						TestTargetID = D564E0602F95EF57004B1ED1;
 					};
@@ -202,7 +177,6 @@
 			targets = (
 				D564E0602F95EF57004B1ED1 /* MarketplaceApp */,
 				D564E06D2F95EF5D004B1ED1 /* MarketplaceAppTests */,
-				D564E0772F95EF5D004B1ED1 /* MarketplaceAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,13 +190,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D564E06C2F95EF5D004B1ED1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D564E0762F95EF5D004B1ED1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D564E0742F95EF5D004B1ED1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +220,6 @@
 			isa = PBXTargetDependency;
 			target = D564E0602F95EF57004B1ED1 /* MarketplaceApp */;
 			targetProxy = D564E06F2F95EF5D004B1ED1 /* PBXContainerItemProxy */;
-		};
-		D564E07A2F95EF5D004B1ED1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D564E0602F95EF57004B1ED1 /* MarketplaceApp */;
-			targetProxy = D564E0792F95EF5D004B1ED1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,54 +472,6 @@
 			};
 			name = Release;
 		};
-		D564E0892F95EF5D004B1ED1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swati.MarketplaceAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = MarketplaceApp;
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Debug;
-		};
-		D564E08A2F95EF5D004B1ED1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swati.MarketplaceAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = MarketplaceApp;
-				XROS_DEPLOYMENT_TARGET = 26.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -591,15 +498,6 @@
 			buildConfigurations = (
 				D564E0862F95EF5D004B1ED1 /* Debug */,
 				D564E0872F95EF5D004B1ED1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D564E0882F95EF5D004B1ED1 /* Build configuration list for PBXNativeTarget "MarketplaceAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D564E0892F95EF5D004B1ED1 /* Debug */,
-				D564E08A2F95EF5D004B1ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

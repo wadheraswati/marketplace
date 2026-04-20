@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "title": "Vintage Wooden Chair",
+    "price": 45.0,
+    "imageURL": "https://picsum.photos/id/1011/400/400",
+    "updatedAt": "2026-04-18T10:00:00Z",
+    "isFavorite": false
+  },
+  {
+    "id": "2",
+    "title": "Modern Table Lamp",
+    "price": 30.5,
+    "imageURL": "https://picsum.photos/id/1025/400/400",
+    "updatedAt": "2026-04-18T11:00:00Z",
+    "isFavorite": true
+  },
+  {
+    "id": "3",
+    "title": "Leather Office Chair",
+    "price": 120.0,
+    "imageURL": "https://picsum.photos/id/103/400/400",
+    "updatedAt": "2026-04-18T12:00:00Z",
+    "isFavorite": false
+  },
+  {
+    "id": "4",
+    "title": "Minimalist Wall Clock",
+    "price": 25.99,
+    "imageURL": "https://picsum.photos/id/1044/400/400",
+    "updatedAt": "2026-04-18T13:00:00Z",
+    "isFavorite": true
+  },
+  {
+    "id": "5",
+    "title": "Cozy Sofa",
+    "price": 350.0,
+    "imageURL": "https://picsum.photos/id/1062/400/400",
+    "updatedAt": "2026-04-18T14:00:00Z",
+    "isFavorite": false
+  },
+  {
+    "id": "6",
+    "title": "Bookshelf - 5 Tier",
+    "price": 89.99,
+    "imageURL": "https://picsum.photos/id/1076/400/400",
+    "updatedAt": "2026-04-18T15:00:00Z",
+    "isFavorite": false
+  },
+  {
+    "id": "7",
+    "title": "Kitchen Bar Stool",
+    "price": 60.0,
+    "imageURL": "https://picsum.photos/id/1080/400/400",
+    "updatedAt": "2026-04-18T16:00:00Z",
+    "isFavorite": true
+  },
+  {
+    "id": "8",
+    "title": "Indoor Plant Pot Set",
+    "price": 20.0,
+    "imageURL": "https://picsum.photos/id/1084/400/400",
+    "updatedAt": "2026-04-18T17:00:00Z",
+    "isFavorite": false
+  },
+  {
+    "id": "9",
+    "title": "Standing Mirror",
+    "price": 75.5,
+    "imageURL": "https://picsum.photos/id/1081/400/400",
+    "updatedAt": "2026-04-18T18:00:00Z",
+    "isFavorite": false
+  },
+  {
+    "id": "10",
+    "title": "Desk Organizer",
+    "price": 15.99,
+    "imageURL": "https://picsum.photos/id/1082/400/400",
+    "updatedAt": "2026-04-18T19:00:00Z",
+    "isFavorite": true
+  }
+]
