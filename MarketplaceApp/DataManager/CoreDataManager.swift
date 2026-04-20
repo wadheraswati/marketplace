@@ -35,7 +35,7 @@ final class CoreDataManager {
         let context = CoreDataManager.shared.context
         
         let request: NSFetchRequest<ListingModel> = ListingModel.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "time", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "updatedAt", ascending: true)]
         
         do {
             let entities = try context.fetch(request)

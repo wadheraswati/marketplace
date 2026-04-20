@@ -21,16 +21,6 @@
 		D564E06E2F95EF5D004B1ED1 /* MarketplaceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketplaceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D564E10E2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "MarketplaceApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Listings.json,
-			);
-			target = D564E0602F95EF57004B1ED1 /* MarketplaceApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 		D564E10F2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "Compile Sources" phase from "MarketplaceApp" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
@@ -45,7 +35,6 @@
 		D564E0632F95EF57004B1ED1 /* MarketplaceApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D564E10E2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "MarketplaceApp" target */,
 				D564E10F2F95FA09004B1ED1 /* Exceptions for "MarketplaceApp" folder in "Compile Sources" phase from "MarketplaceApp" target */,
 			);
 			path = MarketplaceApp;

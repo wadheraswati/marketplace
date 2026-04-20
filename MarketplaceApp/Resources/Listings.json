@@ -1,82 +1,92 @@
 [
   {
-    "id": "1",
+    "id": "1A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Vintage Wooden Chair",
     "price": 45.0,
     "imageURL": "https://picsum.photos/id/1011/400/400",
     "updatedAt": "2026-04-18T10:00:00Z",
-    "isFavorite": false
+    "isFavorite": false,
+    "syncStatus": "pending"
   },
   {
-    "id": "2",
+    "id": "2A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Modern Table Lamp",
     "price": 30.5,
     "imageURL": "https://picsum.photos/id/1025/400/400",
     "updatedAt": "2026-04-18T11:00:00Z",
-    "isFavorite": true
+    "isFavorite": true,
+    "syncStatus": "pending"
   },
   {
-    "id": "3",
+    "id": "3A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Leather Office Chair",
     "price": 120.0,
     "imageURL": "https://picsum.photos/id/103/400/400",
     "updatedAt": "2026-04-18T12:00:00Z",
-    "isFavorite": false
+    "isFavorite": false,
+    "syncStatus": "pending"
   },
   {
-    "id": "4",
+    "id": "4A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Minimalist Wall Clock",
     "price": 25.99,
     "imageURL": "https://picsum.photos/id/1044/400/400",
     "updatedAt": "2026-04-18T13:00:00Z",
-    "isFavorite": true
+    "isFavorite": true,
+    "syncStatus": "pending",
   },
   {
-    "id": "5",
+    "id": "5A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Cozy Sofa",
     "price": 350.0,
     "imageURL": "https://picsum.photos/id/1062/400/400",
     "updatedAt": "2026-04-18T14:00:00Z",
-    "isFavorite": false
+    "isFavorite": false,
+    "syncStatus": "pending"
   },
   {
-    "id": "6",
+    "id": "6A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Bookshelf - 5 Tier",
     "price": 89.99,
     "imageURL": "https://picsum.photos/id/1076/400/400",
     "updatedAt": "2026-04-18T15:00:00Z",
-    "isFavorite": false
+    "isFavorite": false,
+    "syncStatus": "pending"
   },
   {
-    "id": "7",
+    "id": "7A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Kitchen Bar Stool",
     "price": 60.0,
     "imageURL": "https://picsum.photos/id/1080/400/400",
     "updatedAt": "2026-04-18T16:00:00Z",
-    "isFavorite": true
+    "isFavorite": true,
+    "syncStatus": "pending"
   },
   {
-    "id": "8",
+    "id": "8A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Indoor Plant Pot Set",
     "price": 20.0,
     "imageURL": "https://picsum.photos/id/1084/400/400",
     "updatedAt": "2026-04-18T17:00:00Z",
-    "isFavorite": false
+    "isFavorite": false,
+    "syncStatus": "pending"
   },
   {
-    "id": "9",
+    "id": "9A2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Standing Mirror",
     "price": 75.5,
     "imageURL": "https://picsum.photos/id/1081/400/400",
     "updatedAt": "2026-04-18T18:00:00Z",
-    "isFavorite": false
+    "isFavorite": false,
+    "syncStatus": "pending"
   },
   {
-    "id": "10",
+    "id": "2B2B3C4D-1111-2222-3333-1234567890AB",
     "title": "Desk Organizer",
     "price": 15.99,
     "imageURL": "https://picsum.photos/id/1082/400/400",
     "updatedAt": "2026-04-18T19:00:00Z",
-    "isFavorite": true
+    "isFavorite": true,
+    "syncStatus": "pending"
   }
 ]

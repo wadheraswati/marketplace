@@ -36,22 +36,23 @@ struct ListingsView: View {
                         }
                     }
                 }
-            }
-        }
-        .navigationTitle("Marketplace")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink {
-                    CreateListingView()
-                } label: {
-                    Image(systemName: "plus")
+                .navigationTitle("Marketplace")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink {
+                            CreateListingView()
+                        } label: {
+                            Image(systemName: "plus")
 
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .buttonBorderShape(.capsule)
+                        .padding()
+                    }
                 }
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.capsule)
-                .padding()
             }
         }
+        
         .task {
             await viewModel.loadListings()
         }
