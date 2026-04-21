@@ -24,7 +24,7 @@ final class ListingDataManager {
 
     private init() {
         container = NSPersistentContainer(name: "ListingModel")
-        container.loadPersistentStores { _, error in
+        container.loadPersistentStores { storeDescription, error in
             if let error = error {
                 fatalError("CoreData failed: \(error)")
             }

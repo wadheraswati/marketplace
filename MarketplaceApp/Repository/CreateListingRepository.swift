@@ -6,20 +6,20 @@
 //
 
 protocol CreateListingRepositoryProtocol {
-    func createListing(listing: MyListing) async throws -> Bool
+    func createListing(listing: MyListing) async throws
 }
 
 final class CreateListingRepository: CreateListingRepositoryProtocol {
-    
-    func createListing(listing: MyListing) async throws -> Bool {
+    let listingDataManager = MyListingDataManager.shared
+
+    func createListing(listing: MyListing) async throws {
         do {
-            let status = try await NetworkManager.shared.request(
+            try await NetworkManager.shared.request(
                 endpoint: .uploadListing(listing: listing),
                 responseType: Bool.self)
-            return status
         } catch {
+            listingDataManager.saveListingInDB(listing)
             print("create listing failed - \(error)")
         }
-        return false
     }
 }

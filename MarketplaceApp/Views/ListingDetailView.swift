@@ -25,20 +25,23 @@ struct ListingDetailView: View {
                         onFavoriteTap()
                     } label: {
                         Image(systemName: listing.isFavorite ? "heart.fill" : "heart")
-                            .foregroundColor(.white)
+                            .foregroundColor(.red)
                             .padding()
                             .background(.black.opacity(0.6))
                             .clipShape(Circle())
                     }
                     .padding()
                 }
-                Text("$\(listing.price, specifier: "%.2f")")
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.black)
-                
-                Text(descriptionText)
-                    .font(.subheadline)
+                VStack(alignment: .leading) {
+                    Text("$\(listing.price, specifier: "%.2f")")
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.black)
+                    Spacer()
+                    
+                    Text(descriptionText)
+                        .font(.subheadline)
+                }
                 
             }
             .padding()

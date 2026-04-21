@@ -17,8 +17,8 @@ final class MyListingDataManager {
     }
 
     private init() {
-        container = NSPersistentContainer(name: "MyListingModel")
-        container.loadPersistentStores { _, error in
+        container = NSPersistentContainer(name: "ListingModel")
+        container.loadPersistentStores { storeDescription, error in
             if let error = error {
                 fatalError("CoreData failed: \(error)")
             }
@@ -45,19 +45,20 @@ final class MyListingDataManager {
         return entities?.map { MyListing(entity: $0) } ?? []
     }
     
-    func saveListingsInDB(_ listings: [MyListing]) {
+    func saveListingInDB(_ listing: MyListing) {
         let context = MyListingDataManager.shared.context
-
-        for listing in listings {
-            let entity = MyListingModel(context: context)
-            entity.update(from: listing)
-        }
+        let entity = MyListingModel(context: context)
+        entity.update(from: listing)
         save()
     }
     
     func save() {
         if context.hasChanges {
-            try? context.save()
+            do {
+                try context.save()
+            } catch {
+                print(error)
+            }
         }
     }
     

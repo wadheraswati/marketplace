@@ -8,18 +8,25 @@
 import Foundation
 import Combine
 import UIKit
+import PhotosUI
+import SwiftUI
 
 @MainActor
 final class CreateListingViewModel: ObservableObject {
     
     @Published var title: String = ""
     @Published var price: String = ""
-    @Published var selectedImage: UIImage?
-    
-    private let repository: ListingRepositoryProtocol
+
+    @Published var selectedItem: PhotosPickerItem?
+    @Published var selectedPhoto: Image?
+
+    @Published var showAlert = false
+    @Published var shouldDismiss = false
+
+    private let repository: CreateListingRepositoryProtocol
     private let imageCache = DiskCacheManager.shared
     
-    init(repository: ListingRepositoryProtocol) {
+    init(repository: CreateListingRepositoryProtocol) {
         self.repository = repository
     }
     
@@ -32,39 +39,37 @@ final class CreateListingViewModel: ObservableObject {
         return true
     }
     
-    func save() {
-        guard isValid else { return }
-        
-        let id = UUID()
-        
-//        var localPath: String?
-        
-        if let image = selectedImage {
-            let thumbnail = ThumbnailGenerator.generate(from: image)
-            imageCache.save(thumbnail, forKey: "\(id).jpg")
+    func save() async {
+        guard isValid else {
+            return
         }
         
-        let listing = Listing(
+        let id = UUID()
+        var imageData: Data? = nil
+        
+        if let data = try? await selectedItem?.loadTransferable(type: Data.self) {
+           imageData = data
+        }
+        
+        let listing = MyListing(
             id: id,
             title: title,
             price: Double(price) ?? 0,
-            imageURL: nil,
-            isFavorite: false,
+            imageData: imageData,
             updatedAt: Date(),
+            syncStatus: .pending
         )
-        
-//        repository.createListing(listing)
-        
-        reset()
+        do {
+            try await repository.createListing(listing: listing)
+            shouldDismiss = true
+        } catch {
+            
+        }
     }
     
     func reset() {
         title = ""
         price = ""
-        selectedImage = nil
-    }
-    
-    func pickImage() {
-        // Hook this to PHPicker in View
+        selectedPhoto = nil
     }
 }

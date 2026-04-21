@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct CreateListingView: View {
     
-    @StateObject var viewModel = CreateListingViewModel(repository: Repository())
-    
+    @StateObject var viewModel = CreateListingViewModel(repository: CreateListingRepository())
+    @State private var isPickerPresented = false
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         Form {
-            Section(header: Text("Details")) {
+            Section() {
                 TextField("Title", text: $viewModel.title)
                 
                 TextField("Price", text: $viewModel.price)
@@ -22,24 +25,44 @@ struct CreateListingView: View {
             
             Section {
                 Button("Pick Image") {
-                    viewModel.pickImage()
+                   isPickerPresented = true
+                }
+                .photosPicker(isPresented: $isPickerPresented, selection: $viewModel.selectedItem)
+                .onChange(of: viewModel.selectedItem) {
+                    Task {
+                        if let data = try? await viewModel.selectedItem?.loadTransferable(type: Data.self),
+                           let uiImage = UIImage(data: data) {
+                            viewModel.selectedPhoto = Image(uiImage: uiImage)
+                        } else {
+                            print("Failed")
+                        }
+                    }
                 }
                 
-                if let image = viewModel.selectedImage {
-                    Image(uiImage: image)
+                if let image = viewModel.selectedPhoto {
+                    image
                         .resizable()
                         .scaledToFit()
                         .frame(height: 150)
                 }
             }
-            
-            Section {
+        }
+        
+        .navigationTitle("Create Listing")
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
                 Button("Save") {
-                    viewModel.save()
+                    Task {
+                        await
+                        viewModel.save()
+                    }
+                }
+                .foregroundColor(.black)
+                .onChange(of: viewModel.shouldDismiss) { _, newValue in
+                    if newValue { dismiss() }
                 }
                 .disabled(!viewModel.isValid)
             }
         }
-        .navigationTitle("New Listing")
     }
 }

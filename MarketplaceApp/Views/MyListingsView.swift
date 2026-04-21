@@ -27,11 +27,14 @@ struct MyListingsView: View {
                         CreateListingView()
                     } label: {
                         Image(systemName: "plus")
+                            .foregroundColor(.black)
                     }
                     .buttonBorderShape(.capsule)
                 }
             }
-            
+        }
+        .task {
+            await viewModel.loadListings()
         }
     }
 }

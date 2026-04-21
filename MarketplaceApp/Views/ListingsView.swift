@@ -40,7 +40,6 @@ struct ListingsView: View {
                         } label: {
                             Text("Sell")
                         }
-                        .buttonBorderShape(.capsule)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink {
@@ -55,7 +54,6 @@ struct ListingsView: View {
                 }
             }
         }
-        
         .task {
             await viewModel.loadListings()
         }

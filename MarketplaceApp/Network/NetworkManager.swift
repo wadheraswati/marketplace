@@ -20,6 +20,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
+    @discardableResult
     func request<T: Decodable>(
         endpoint: APIEndpoint,
         responseType: T.Type,
