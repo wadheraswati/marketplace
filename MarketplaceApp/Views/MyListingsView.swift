@@ -11,7 +11,7 @@ struct MyListingsView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            List {
                 if viewModel.listings.isEmpty {
                     Text("No items to sell at the moment.")
                 } else {
