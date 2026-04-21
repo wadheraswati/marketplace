@@ -28,6 +28,13 @@ final class ListingsViewModel: ObservableObject {
     }
     
     func toggleFavorite(_ listing: Listing) {
-        repository.toggleFavorite(listing)
+        listings = listings.map { currentListing in
+            var updatedListing = currentListing
+            if listing.id == updatedListing.id {
+                updatedListing.isFavorite.toggle()
+                repository.toggleFavorite(updatedListing)
+            }
+            return updatedListing
+        }
     }
 }

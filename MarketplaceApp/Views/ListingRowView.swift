@@ -27,19 +27,14 @@ struct ListingRowView: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
                 
-                SyncStatusBadge(status: listing.syncStatus)
             }
             
             Spacer()
-            
             Button(action: onFavoriteTap) {
                 Image(systemName: listing.isFavorite ? "heart.fill" : "heart")
                     .foregroundColor(.red)
             }
+            .buttonStyle(.plain)
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(radius: 1)
     }
 }

@@ -47,6 +47,7 @@ extension ListingModel {
             id: id ?? UUID(),
             title: title ?? "",
             price: price,
+            imageURL: imageURL,
             isFavorite: isFavorite,
             updatedAt: updatedAt ?? Date(),
             syncStatus: SyncStatus(rawValue: syncStatus ?? "pending") ?? .pending
@@ -57,6 +58,7 @@ extension ListingModel {
         id = listing.id
         title = listing.title
         price = listing.price
+        imageURL = listing.imageURL
         isFavorite = listing.isFavorite
         updatedAt = listing.updatedAt
         syncStatus = listing.syncStatus.rawValue

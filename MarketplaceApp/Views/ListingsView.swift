@@ -19,23 +19,21 @@ struct ListingsView: View {
                 Text("No listings available")
             } else {
                 List {
-                    LazyVStack(spacing: 12) {
-                        ForEach(viewModel.listings) { listing in
-                            NavigationLink {
-                                ListingDetailView(listing: listing,
-                                                  onFavoriteTap: {
-                                    viewModel.toggleFavorite(listing)
-                                })
-                            } label: {
-                                ListingRowView(listing: listing,
-                                               onFavoriteTap: {
-                                    viewModel.toggleFavorite(listing)
-                                }
-                                )
-                            }
+                    ForEach(viewModel.listings) { listing in
+                        NavigationLink {
+                            ListingDetailView(listing: listing,
+                                              onFavoriteTap: {
+                                viewModel.toggleFavorite(listing)
+                            })
+                        } label: {
+                            ListingRowView(listing: listing,
+                                           onFavoriteTap: {
+                                viewModel.toggleFavorite(listing)
+                            })
                         }
                     }
                 }
+                .listRowSeparator(.hidden)
                 .navigationTitle("Marketplace")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -45,7 +43,17 @@ struct ListingsView: View {
                             Image(systemName: "plus")
 
                         }
-                        .buttonStyle(.borderedProminent)
+                        .buttonStyle(.plain)
+                        .buttonBorderShape(.capsule)
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink {
+                            FavoritesView(onFavoriteTap: { listing in
+                                viewModel.toggleFavorite(listing)
+                            })
+                        } label: {
+                            Image(systemName: "heart")
+                        }
                         .buttonBorderShape(.capsule)
                         .padding()
                     }

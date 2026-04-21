@@ -15,24 +15,36 @@ struct ListingDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                CachedImageView(urlString: listing.imageURL)
-                    .frame(height: 250)
-                    .cornerRadius(12)
-                
-                Text(listing.title)
-                    .font(.title)
-                    .bold()
-                
+                ZStack(alignment: .bottomTrailing) {
+                    
+                    CachedImageView(urlString: listing.imageURL)
+                        .frame(height: 280)
+                        .clipped()
+                    
+                    Button {
+                        onFavoriteTap()
+                    } label: {
+                        Image(systemName: listing.isFavorite ? "heart.fill" : "heart")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(.black.opacity(0.6))
+                            .clipShape(Circle())
+                    }
+                    .padding()
+                }
                 Text("$\(listing.price, specifier: "%.2f")")
                     .font(.title2)
-                    .foregroundColor(.gray)
+                    .bold()
+                    .foregroundColor(.black)
                 
-                SyncStatusBadge(status: listing.syncStatus)
+                Text(descriptionText)
+                    .font(.subheadline)
                 
-                Spacer()
             }
             .padding()
         }
-        .navigationTitle("Details")
+        .navigationTitle(listing.title)
     }
 }
+
+private var descriptionText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
