@@ -10,7 +10,6 @@ import Combine
 
 protocol ListingRepositoryProtocol {
     func fetchListings() async throws -> [Listing]
-    func createListing(_ listing: Listing)
     func toggleFavorite(_ listing: Listing)
 }
 
@@ -63,10 +62,6 @@ final class Repository: ListingRepositoryProtocol {
             print(error)
         }
         return []
-    }
-    
-    func createListing(_ listing: Listing) {
-        // Pending
     }
     
     func toggleFavorite(_ listing: Listing) {

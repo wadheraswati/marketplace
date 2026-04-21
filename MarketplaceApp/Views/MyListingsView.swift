@@ -7,15 +7,31 @@
 
 import SwiftUI
 struct MyListingsView: View {
-    @StateObject var viewModel: ListingsViewModel
-
+    @StateObject var viewModel = MyListingsViewModel(repository: MyListingRepository())
+    
     var body: some View {
         NavigationStack {
-            if viewModel.listings.isEmpty {
-                Text("You are not selling anything")
-            } else {
-                
+            VStack {
+                if viewModel.listings.isEmpty {
+                    Text("No items to sell at the moment.")
+                } else {
+                    ForEach(viewModel.listings, id: \.id) { listing in
+                        MyListingRowView(listing: listing)
+                    }
+                }
             }
+            .navigationTitle("My Listings")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        CreateListingView()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .buttonBorderShape(.capsule)
+                }
+            }
+            
         }
     }
 }

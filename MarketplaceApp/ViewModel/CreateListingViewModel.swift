@@ -53,7 +53,7 @@ final class CreateListingViewModel: ObservableObject {
             updatedAt: Date(),
         )
         
-        repository.createListing(listing)
+//        repository.createListing(listing)
         
         reset()
     }

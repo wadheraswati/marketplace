@@ -36,10 +36,9 @@ struct ListingsView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         NavigationLink {
-                            CreateListingView()
+                            MyListingsView()
                         } label: {
                             Text("Sell")
-
                         }
                         .buttonBorderShape(.capsule)
                     }

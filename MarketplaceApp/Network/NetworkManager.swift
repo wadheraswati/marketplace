@@ -22,7 +22,7 @@ class NetworkManager {
     
     func request<T: Decodable>(
         endpoint: APIEndpoint,
-        responseType: T.Type
+        responseType: T.Type,
     ) async throws -> T {
         
         guard let url = endpoint.url else {
@@ -31,6 +31,7 @@ class NetworkManager {
         
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method
+        request.httpBody = endpoint.body
         
         let (data, response) = try await URLSession.shared.data(for: request)
         

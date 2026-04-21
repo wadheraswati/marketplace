@@ -25,19 +25,24 @@ final class MyListingDataManager {
         }
     }
     
-    func fetchListingsFromDB() async throws -> [MyListing] {
+    func fetchListingsFromDB() -> [MyListing] {
         let context = MyListingDataManager.shared.context
         
         let request: NSFetchRequest<MyListingModel> = MyListingModel.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "updatedAt", ascending: true)]
         
-        do {
-            let entities = try context.fetch(request)
-            return entities.map { MyListing(entity: $0) }
-        } catch {
-            print("Fetch error: \(error)")
-        }
-        return []
+        let entities = try? context.fetch(request)
+        return entities?.map { MyListing(entity: $0) } ?? []
+    }
+    
+    func fetchPendingListingsFromDB() -> [MyListing] {
+        let context = MyListingDataManager.shared.context
+        
+        let request: NSFetchRequest<MyListingModel> = MyListingModel.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "syncStatus == pending", ascending: true)]
+        
+        let entities = try? context.fetch(request)
+        return entities?.map { MyListing(entity: $0) } ?? []
     }
     
     func saveListingsInDB(_ listings: [MyListing]) {

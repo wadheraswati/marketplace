@@ -32,7 +32,6 @@ extension Listing {
 }
 
 extension ListingModel {
-
     func toDomain() -> Listing {
         Listing(
             id: id ?? UUID(),
