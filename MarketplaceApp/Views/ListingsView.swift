@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ListingsView: View {
     
     @StateObject var viewModel: ListingsViewModel
@@ -36,14 +34,13 @@ struct ListingsView: View {
                 .listRowSeparator(.hidden)
                 .navigationTitle("Marketplace")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         NavigationLink {
                             CreateListingView()
                         } label: {
-                            Image(systemName: "plus")
+                            Text("Sell")
 
                         }
-                        .buttonStyle(.plain)
                         .buttonBorderShape(.capsule)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -55,7 +52,6 @@ struct ListingsView: View {
                             Image(systemName: "heart")
                         }
                         .buttonBorderShape(.capsule)
-                        .padding()
                     }
                 }
             }

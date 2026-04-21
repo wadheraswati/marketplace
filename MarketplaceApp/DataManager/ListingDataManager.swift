@@ -1,5 +1,5 @@
 //
-//  CoreDataManager.swift
+//  ListingDataManager.swift
 //  MarketplaceApp
 //
 //  Created by Swati Seera on 2026-04-20.
@@ -13,8 +13,8 @@ protocol CoreDataProtocol {
     func update(_ listing: Listing)
 }
 
-final class CoreDataManager {
-    static let shared = CoreDataManager()
+final class ListingDataManager {
+    static let shared = ListingDataManager()
 
     let container: NSPersistentContainer
 
@@ -32,7 +32,7 @@ final class CoreDataManager {
     }
     
     func fetchListingsFromDB() async throws -> [Listing] {
-        let context = CoreDataManager.shared.context
+        let context = ListingDataManager.shared.context
         
         let request: NSFetchRequest<ListingModel> = ListingModel.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "updatedAt", ascending: true)]
@@ -47,7 +47,7 @@ final class CoreDataManager {
     }
     
     func saveListingsInDB(_ listings: [Listing]) {
-        let context = CoreDataManager.shared.context
+        let context = ListingDataManager.shared.context
 
         for listing in listings {
             let entity = ListingModel(context: context)
@@ -63,13 +63,12 @@ final class CoreDataManager {
     }
     
     func update(_ listing: Listing) {
-        let context = CoreDataManager.shared.context
+        let context = ListingDataManager.shared.context
         let request: NSFetchRequest<ListingModel> = ListingModel.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", listing.id as CVarArg)
         
         do {
             if let entity = try context.fetch(request).first {
-                entity.syncStatus = listing.syncStatus.rawValue
                 entity.isFavorite = listing.isFavorite
                 save()
             }

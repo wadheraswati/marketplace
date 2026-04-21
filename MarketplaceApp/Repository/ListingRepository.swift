@@ -17,7 +17,7 @@ protocol ListingRepositoryProtocol {
 final class Repository: ListingRepositoryProtocol {
     
     static let repo = Repository()
-    let coreDataManager = CoreDataManager.shared
+    let listingDataManager = ListingDataManager.shared
     
     @Published var listings: [Listing] = []
     
@@ -35,7 +35,7 @@ final class Repository: ListingRepositoryProtocol {
     
     private func fetchListingsFromLocal() async throws -> [Listing] {
         do {
-            let listings = try await coreDataManager.fetchListingsFromDB()
+            let listings = try await listingDataManager.fetchListingsFromDB()
             guard !listings.isEmpty else {
                 return try await loadListingsFromLocalFile()
             }
@@ -57,7 +57,7 @@ final class Repository: ListingRepositoryProtocol {
         
         do {
             let listings = try decoder.decode([Listing].self, from: data)
-            coreDataManager.saveListingsInDB(listings)
+            listingDataManager.saveListingsInDB(listings)
             return listings
         } catch {
             print(error)
@@ -70,6 +70,6 @@ final class Repository: ListingRepositoryProtocol {
     }
     
     func toggleFavorite(_ listing: Listing) {
-        coreDataManager.update(listing)
+        listingDataManager.update(listing)
     }
 }

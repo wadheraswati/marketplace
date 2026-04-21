@@ -24,18 +24,14 @@ struct SyncStatusBadge: View {
     private var statusText: String {
         switch status {
         case .pending: return "Pending"
-        case .syncing: return "Syncing"
         case .synced: return "Synced"
-        case .failed: return "Failed"
         }
     }
     
     private var backgroundColor: Color {
         switch status {
         case .pending: return .orange
-        case .syncing: return .blue
         case .synced: return .green
-        case .failed: return .red
         }
     }
 }

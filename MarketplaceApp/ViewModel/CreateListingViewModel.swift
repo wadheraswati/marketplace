@@ -51,7 +51,6 @@ final class CreateListingViewModel: ObservableObject {
             imageURL: nil,
             isFavorite: false,
             updatedAt: Date(),
-            syncStatus: .pending
         )
         
         repository.createListing(listing)

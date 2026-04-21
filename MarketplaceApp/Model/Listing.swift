@@ -15,14 +15,6 @@ struct Listing: Identifiable, Codable {
     var imageURL: String?
     var isFavorite: Bool
     var updatedAt: Date
-    var syncStatus: SyncStatus
-}
-
-enum SyncStatus: String, Codable {
-    case pending
-    case syncing
-    case synced
-    case failed
 }
 
 // Entity → Model
@@ -35,7 +27,6 @@ extension Listing {
             imageURL: entity.imageURL ?? "",
             isFavorite: entity.isFavorite,
             updatedAt: entity.updatedAt ?? .now,
-            syncStatus: SyncStatus(rawValue: entity.syncStatus ?? SyncStatus.pending.rawValue) ?? SyncStatus.pending
         )
     }
 }
@@ -50,7 +41,6 @@ extension ListingModel {
             imageURL: imageURL,
             isFavorite: isFavorite,
             updatedAt: updatedAt ?? Date(),
-            syncStatus: SyncStatus(rawValue: syncStatus ?? "pending") ?? .pending
         )
     }
 
@@ -61,6 +51,5 @@ extension ListingModel {
         imageURL = listing.imageURL
         isFavorite = listing.isFavorite
         updatedAt = listing.updatedAt
-        syncStatus = listing.syncStatus.rawValue
     }
 }
