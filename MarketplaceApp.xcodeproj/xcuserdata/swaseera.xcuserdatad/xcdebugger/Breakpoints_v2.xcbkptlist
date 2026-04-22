@@ -150,8 +150,8 @@
             filePath = "MarketplaceApp/DataManager/MyListingDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "saveListingInDB(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -166,56 +166,10 @@
             filePath = "MarketplaceApp/DataManager/MyListingDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "save()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C115CE8-B723-4F25-903E-DEA672B0BF52"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MarketplaceApp/DataManager/ListingDataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0C115CE8-B723-4F25-903E-DEA672B0BF52 - ea7869ff2d85d4bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MarketplaceApp.ListingDataManager.() -&gt; MarketplaceApp.ListingDataManager.init() -&gt; MarketplaceApp.ListingDataManager"
-                  moduleName = "MarketplaceApp.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/DataManager/ListingDataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "0C115CE8-B723-4F25-903E-DEA672B0BF52 - ea7869ff2d85d4bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MarketplaceApp.ListingDataManager.() -&gt; MarketplaceApp.ListingDataManager.init() -&gt; MarketplaceApp.ListingDataManager"
-                  moduleName = "MarketplaceApp.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/DataManager/ListingDataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -244,13 +198,13 @@
             filePath = "MarketplaceApp/Repository/MyListingRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "observeNetwork()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - 429818721b4a677"
+                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - 429818721b4a731"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -260,11 +214,11 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34">
                </Location>
                <Location
-                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - 4289c2131008f663"
+                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - 4289c2131008f725"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -274,11 +228,11 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34">
                </Location>
                <Location
-                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - 72bef5b407f049db"
+                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - 72bef5b407f0489d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -288,11 +242,11 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34">
                </Location>
                <Location
-                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - a998d66fe8796130"
+                  uuid = "1DB12310-8759-40F7-B173-716D34B46B4E - a998d66fe8796076"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -302,8 +256,8 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -318,13 +272,13 @@
             filePath = "MarketplaceApp/Repository/MyListingRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "observeNetwork()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - a998d66fe87961f2"
+                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - a998d66fe8796038"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -334,11 +288,11 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
                </Location>
                <Location
-                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - 3a2d0560683fe9ba"
+                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - 3a2d0560683fe870"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -348,11 +302,11 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
                </Location>
                <Location
-                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - 6183e42932129dd5"
+                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - 6183e42932129c1f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -362,11 +316,11 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31">
+                  startingLineNumber = "37"
+                  endingLineNumber = "37">
                </Location>
                <Location
-                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - bd88030651072ff7"
+                  uuid = "33937EF3-697B-48A4-BA23-7EDA4D579DC4 - bd88030651072e3d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -376,8 +330,8 @@
                   urlString = "file:///Users/swaseera/Documents/MarketplaceApp/MarketplaceApp/Repository/MyListingRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -392,8 +346,8 @@
             filePath = "MarketplaceApp/Repository/MyListingRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "syncIfNeeded()"
             landmarkType = "7">
          </BreakpointContent>
@@ -408,8 +362,8 @@
             filePath = "MarketplaceApp/Repository/MyListingRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "syncIfNeeded()"
             landmarkType = "7">
          </BreakpointContent>

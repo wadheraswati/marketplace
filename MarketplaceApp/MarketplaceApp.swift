@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct MarketplaceApp: App {
+    init() {
+        NetworkMonitor.shared.start()
+        MyListingRepository().handleAppLaunch()
+    }
     var body: some Scene {
         WindowGroup {
             ListingsView(viewModel: ListingsViewModel(repository: Repository()))

@@ -39,7 +39,10 @@ final class MyListingDataManager {
         let context = MyListingDataManager.shared.context
         
         let request: NSFetchRequest<MyListingModel> = MyListingModel.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "syncStatus == pending", ascending: true)]
+        request.predicate = NSPredicate(
+            format: "syncStatus == %@",
+            SyncStatus.pending.rawValue
+        )
         
         let entities = try? context.fetch(request)
         return entities?.map { MyListing(entity: $0) } ?? []

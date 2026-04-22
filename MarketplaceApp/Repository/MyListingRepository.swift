@@ -24,6 +24,12 @@ final class MyListingRepository: MyListingRepositoryProtocol {
         observeNetwork()
     }
     
+    func handleAppLaunch() {
+        Task {
+            try await syncIfNeeded()
+        }
+    }
+    
     private func observeNetwork() {
         NetworkMonitor.shared.onReconnect = { [weak self] in
             Task {
