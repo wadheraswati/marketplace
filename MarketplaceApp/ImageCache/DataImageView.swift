@@ -17,7 +17,8 @@ struct DataImageView: View {
                 .scaledToFit()
         } else {
             // Placeholder for invalid data
-            ProgressView()
+            Text("No Image")
+                .foregroundColor(.gray)
         }
     }
 }

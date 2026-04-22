@@ -19,7 +19,8 @@ struct CachedImageView: View {
                 Image(uiImage: image)
                     .resizable()
             } else {
-                ProgressView()
+                Text("No Image")
+                    .foregroundColor(.gray)
             }
         }
         .task {
