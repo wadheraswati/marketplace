@@ -16,20 +16,23 @@ struct ListingsView: View {
             if viewModel.listings.isEmpty {
                 Text("No listings available")
             } else {
-                List {
-                    ForEach(viewModel.listings) { listing in
-                        NavigationLink {
-                            ListingDetailView(listing: listing,
-                                              onFavoriteTap: {
-                                viewModel.toggleFavorite(listing)
-                            })
-                        } label: {
-                            ListingRowView(listing: listing,
-                                           onFavoriteTap: {
-                                viewModel.toggleFavorite(listing)
-                            })
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.listings) { listing in
+                            NavigationLink {
+                                ListingDetailView(listing: listing,
+                                                  onFavoriteTap: {
+                                    viewModel.toggleFavorite(listing)
+                                })
+                            } label: {
+                                ListingRowView(listing: listing,
+                                               onFavoriteTap: {
+                                    viewModel.toggleFavorite(listing)
+                                })
+                            }
                         }
                     }
+                    .padding()
                 }
                 .listRowSeparator(.hidden)
                 .navigationTitle("Marketplace")
