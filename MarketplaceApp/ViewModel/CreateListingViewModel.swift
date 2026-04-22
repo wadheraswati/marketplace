@@ -24,7 +24,6 @@ final class CreateListingViewModel: ObservableObject {
     @Published var shouldDismiss = false
 
     private let repository: CreateListingRepositoryProtocol
-    private let imageCache = DiskCacheManager.shared
     
     init(repository: CreateListingRepositoryProtocol) {
         self.repository = repository
@@ -63,13 +62,7 @@ final class CreateListingViewModel: ObservableObject {
             try await repository.createListing(listing: listing)
             shouldDismiss = true
         } catch {
-            
+            print("create failed")
         }
-    }
-    
-    func reset() {
-        title = ""
-        price = ""
-        selectedPhoto = nil
     }
 }

@@ -55,7 +55,7 @@ struct ListingsView: View {
             }
         }
         .task {
-            await viewModel.loadListings()
+            await viewModel.fetchListings()
         }
     }
 }

@@ -19,7 +19,7 @@ final class ListingsViewModel: ObservableObject {
         self.repository = repository
     }
     
-    func loadListings() async {        
+    func fetchListings() async {        
         do {
             listings = try await repository.fetchListings()
         } catch {
