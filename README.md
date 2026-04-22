@@ -1,33 +1,101 @@
-A lightweight marketplace app that supports browsing listings, creating new listings offline, favoriting items, and automatic background sync when network connectivity is restored.
+# 🛒 Offline-first Marketplace (iOS - SwiftUI)
 
-**Features**
+A lightweight offline-first marketplace app built using SwiftUI. Users can browse listings, create new listings offline, and automatically sync data when network connectivity is restored.
 
-📦 Browse marketplace listings (offline-first)
-⭐ Mark/unmark favorites
-➕ Create new listings offline
-🔄 Automatic sync when network is available
-🖼 Image attachment with compression
-⚡ Smooth scrolling for large set of listings
+---
 
+## 🚀 Features
 
-**Pattern:**
+- 📦 Browse listings (offline-first support)
+- ➕ Create listings without internet
+- ⭐ Favorite/unfavorite items
+- 🔄 Automatic sync on network restore
+- 🖼 Image attachment support
+- ⚡ Smooth performance for 200+ listings
 
-View → ViewModel → Repository → Local DB → Network API
+---
 
+## 🏗 Architecture
 
-**Performance Optimizations:**
+**MVVM + Repository Pattern**
 
-LazyVStack for efficient list rendering
-Thumbnail-based image storage
-Background queue for sync operations
-Batch processing for large datasets
-Local-first loading (no network dependency for UI)
+- **Views (SwiftUI)**
+  - UI built with `LazyVStack`
+  - Navigation & user interactions
 
+- **ViewModels**
+  - UI state management
+  - Input validation
+  - Business logic triggers
 
-**🛠 Tech Stack**
+- **Repository Layer**
+  - Single source of truth
+  - Handles Core Data + sync queue
+  - Offline-first persistence
 
-SwiftUI
-Core Data
-URLSession (async/await)
-Combine (light usage via @Published)
-PhotosUI (image picker)
+- **Sync Engine**
+  - Detects network changes
+  - Syncs pending/failed items in background
+
+---
+
+## 🔄 Offline-first Flow
+
+1. User creates listing → saved locally
+2. Marked as `pending`
+3. Sync triggered when:
+   - App launches
+   - Network becomes available
+4. Status updated:
+   - `synced` or `failed`
+
+---
+
+## 📊 Performance Considerations
+
+- ⚡ Local DB-first loading (instant UI)
+- 🧠 `LazyVStack` for efficient list rendering
+- 🖼 Image compression + thumbnails
+- 🔄 Background sync (non-blocking UI)
+- 📦 Optimized for 200+ listings
+
+---
+
+## 🧪 Testing
+
+- ViewModel validation tests
+- Offline creation flow tests
+- Sync success/failure tests
+- Mock repository for isolation
+
+---
+
+## 🧠 Key Design Decisions
+
+- Offline-first architecture
+- No network dependency for UI rendering
+- Dependency injection for testability
+- Clear separation of concerns (View / VM / Repo)
+- Background sync for performance
+
+---
+
+## 🛠 Tech Stack
+
+- SwiftUI
+- Core Data
+- URLSession (async/await)
+- PhotosUI
+- Combine (@Published)
+
+---
+
+## 📈 Future Improvements
+
+- Pagination for large datasets
+- Exponential backoff retry mechanism
+- BackgroundTasks framework sync
+- Server-side conflict resolution
+- Diffable list updates
+
+---
