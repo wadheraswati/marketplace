@@ -13,7 +13,7 @@ struct CreateListingView: View {
     @StateObject var viewModel = CreateListingViewModel(repository: CreateListingRepository())
     @State private var isPickerPresented = false
     @Environment(\.dismiss) var dismiss
-
+    
     var body: some View {
         Form {
             Section() {
@@ -21,11 +21,14 @@ struct CreateListingView: View {
                 
                 TextField("Price", text: $viewModel.price)
                     .keyboardType(.decimalPad)
+                    .onChange(of: viewModel.price, { _, newValue in
+                        viewModel.price = "$" + newValue.replacingOccurrences(of: "$", with: "")
+                    })
             }
             
             Section {
                 Button("Pick Image") {
-                   isPickerPresented = true
+                    isPickerPresented = true
                 }
                 .photosPicker(isPresented: $isPickerPresented, selection: $viewModel.selectedItem)
                 .onChange(of: viewModel.selectedItem) {

@@ -32,7 +32,7 @@ final class CreateListingViewModel: ObservableObject {
     
     var isValid: Bool {
         guard !title.isEmpty,
-              let priceValue = Double(price),
+              let priceValue = Double(price.replacingOccurrences(of: "$", with: "")),
               priceValue > 0 else {
             return false
         }

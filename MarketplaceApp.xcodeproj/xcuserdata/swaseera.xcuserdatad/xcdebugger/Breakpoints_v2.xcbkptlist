@@ -55,16 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CA390ACA-E6B1-4984-86E2-16375A83EC7E"
+            uuid = "18ED62EA-C284-4303-BAB5-7D90C206DC18"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MarketplaceApp/ViewModel/CreateListingViewModel.swift"
+            filePath = "MarketplaceApp/Repository/MyListingRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "save()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "updateSyncStatus(listing:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
