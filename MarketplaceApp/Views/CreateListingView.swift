@@ -57,7 +57,6 @@ struct CreateListingView: View {
                         viewModel.save()
                     }
                 }
-                .foregroundColor(.black)
                 .onChange(of: viewModel.shouldDismiss) { _, newValue in
                     if newValue { dismiss() }
                 }

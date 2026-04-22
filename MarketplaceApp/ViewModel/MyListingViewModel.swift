@@ -26,4 +26,15 @@ final class MyListingsViewModel: ObservableObject {
             print("API Error: \(error)")
         }
     }
+    
+    func syncListing(_ listing: MyListing) {
+        repository.updateSyncStatus(listing: listing)
+        refresh()
+    }
+    
+    private func refresh() {
+        Task {
+            listings = try await repository.fetchListings()
+        }
+    }
 }

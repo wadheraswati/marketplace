@@ -65,6 +65,7 @@ final class Repository: ListingRepositoryProtocol {
     }
     
     func toggleFavorite(_ listing: Listing) {
+        // add a network call here and update local DB upon sucess
         listingDataManager.update(listing)
     }
 }

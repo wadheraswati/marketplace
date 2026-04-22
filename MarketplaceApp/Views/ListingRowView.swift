@@ -38,28 +38,3 @@ struct ListingRowView: View {
         }
     }
 }
-
-struct MyListingRowView: View {
-    
-    let listing: MyListing
-    
-    var body: some View {
-        HStack(spacing: 12) {
-            
-            DataImageView(imageData: listing.imageData)
-                .frame(width: 80, height: 80)
-                .cornerRadius(10)
-            
-            VStack(alignment: .leading, spacing: 6) {
-                Text(listing.title)
-                    .font(.headline)
-                
-                Text("$\(listing.price, specifier: "%.2f")")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                
-            }
-            .buttonStyle(.plain)
-        }
-    }
-}

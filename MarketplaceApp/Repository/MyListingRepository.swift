@@ -11,6 +11,7 @@ import Combine
 protocol MyListingRepositoryProtocol {
     func fetchListings() async throws -> [MyListing]
     func update(listing: MyListing) async throws
+    func updateSyncStatus(listing: MyListing)
 }
 
 final class MyListingRepository: MyListingRepositoryProtocol {
@@ -77,5 +78,11 @@ final class MyListingRepository: MyListingRepositoryProtocol {
         } catch {
             print("upload listing failed - \(error)")
         }
+    }
+    
+    func updateSyncStatus(listing: MyListing) {
+        var currentListing = listing
+        currentListing.syncStatus = Bool.random() ? .synced : .pending
+        listingDataManager.update(currentListing)
     }
 }

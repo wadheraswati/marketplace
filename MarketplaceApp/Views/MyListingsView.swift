@@ -16,7 +16,9 @@ struct MyListingsView: View {
                     Text("No items to sell at the moment.")
                 } else {
                     ForEach(viewModel.listings, id: \.id) { listing in
-                        MyListingRowView(listing: listing)
+                        MyListingRowView(listing: listing, syncTapped: {
+                            viewModel.syncListing(listing)
+                        })
                     }
                 }
             }
